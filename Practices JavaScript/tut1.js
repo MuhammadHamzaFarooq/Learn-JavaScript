@@ -118,7 +118,7 @@ document.write(name+" ordered "+productTitle+" on XYZ Clothing store");
 
 
 
-//        ========================= Chapter1 (VARIABLE NAMES: LEGAL & ILLEGAL ) ================= 
+//        ========================= Chapter4 (VARIABLE NAMES: LEGAL & ILLEGAL ) ================= 
 
 //Q1 -1. Declare 3 variables in one statement.
 var x,y,z;
@@ -137,8 +137,110 @@ var _,$,$word,_word,Pak;
 // _____. For example $name, _name or name
 // d) Variable names are case _________
 // e) Variable names should not be JS _________
+
 document.write("<h1> Rules for naming JS variables</h2> <br> <br>" );
+document.write("variable name can only contain. numbers $ and _. For example: $any_1stVariable "+"<br> <br>");
+document.write("variable must being with a letter.$  or_ .For example: $Some_name or name "+"<br> <br> <br>");
+document.write("variable names case sensitive"+"<br> <br>");
+document.write("variabel names should not JS keywords"+"<br> <br>");
 
 
-document.write("variable name can only contain. numbers $")
 
+//        ========================= Chapter5 (MATH EXPRESSIONS) =================
+
+//Q1 -1. Write a program that take two numbers & add them in a new variable. Show the result in your browser.
+var num1=29;
+var num2=30;
+var sum =num1+num2;
+document.write("sum of "+num1+"and "+num2+"is "+sum+"<br> <br>");
+
+//Q2 -2. Repeat task1 for subtraction, multiplication, division & modulus.
+var sub = num1-num2;
+var multi = num1*num2;
+var divi=num1/num2;
+var reminder=num1%num2;
+document.write("subraction of "+num1+"and "+num2+"is "+sub+"<br> <br>");
+document.write("multiplication of "+num1+"and "+num2+"is "+multi+"<br> <br>");
+document.write("division of "+num1+"and "+num2+"is "+divi+"<br> <br>");
+document.write("reminder of "+num1+"and "+num2+"is "+reminder+"<br> <br>");
+
+// //Q3 - 3. Do the following using JS Mathematic Expressions
+// a. Declare a variable.
+// b. Show the value of variable in your browser like “Value
+// after variable declaration is: ??”.
+// c. Initialize the variable with some number.
+// d. Show the value of variable in your browser like “Initial
+// value: 5”.
+// e. Increment the variable.
+// f. Show the value of variable in your browser like “Value
+// after increment is: 6”.
+// g. Add 7 to the variable.
+// h. Show the value of variable in your browser like “Valueafter addition is: 13”.
+// i. Decrement the variable.
+// j. Show the value of variable in your browser like “Value
+// after decrement is: 12”.
+// k. Show the remainder after dividing the variable’s value
+// by 3.
+// l. Output : “The remainder is : 0”.
+
+var x;
+document.write("Value after declaration is "+x+"<br> <br>");
+x=5;
+document.write("Initial value "+x+"<br> <br>");
+x++;
+
+document.write("Value after increment is "+x+"<br> <br>");
+x=x+7;
+document.write("Value after the addition is "+x+"<br> <br>");
+x=x-1;
+document.write("Value after Decrement is "+x+"<br> <br>");
+x=x%x;
+document.write("The remainder is "+x+"<br> <br>");
+
+//Q4 -4. Cost of one movie ticket is 600 PKR. Write a script to store
+//ticket price in a variable & calculate the cost of buying 5 tickets to a movie
+var ticket=600;
+var totalticket=5;
+var totalcost=ticket*totalticket;
+document.write("Total cost to buy  "+ticket+" ticket to a movie is "+totalcost+"PKR"+"<br> <br>");
+
+//Q5 -5. Write a script to display multiplication table of any number in your browser. 
+var tableNo = 4;
+document.write("Table of "+tableNo+"<br> <br>");
+for(var i=1; i<=10;i++){
+    document.write(tableNo +" "+"x"+" "+i +" "+"="+" "+(tableNo*i) +"<br> ");
+}
+document.write("<br> <br> <br>");
+
+//Q6 -6. The Temperature Converter: It’s hot out! Let’s make a
+// converter based on the steps here.
+// a. Store a Celsius temperature into a variable.
+// b. Convert it to Fahrenheit & output “NNoC is NNoF”.
+// c. Now store a Fahrenheit temperature into a variable.
+// d. Convert it to Celsius & output “NNoF is NNoC”.
+
+var tempC;
+var TempF;
+var C=25;
+var F=77;
+//formulas;
+//c=(f-32)*5/9
+//f=(c*9/5)+32
+
+tempC=(F-32)*(5/9);
+tempF=(C*9/5)+32;
+
+document.write(C+"&#8451;"+" is "+F+"&#8457;"+"<br>");
+F=70;
+C=21.111111111111111;
+document.write(F+"&#8457;"+" is "+C+"&#8451;"+"<br>");
+
+// //Q7 -Write a program to implement checkout process of a
+// shopping cart system for an e-commerce website. Store
+// // the following in variables
+// a. Price of item 1
+// b. Price of item 2
+// c. Ordered quantity of item 1
+// d. Ordered Quantity of item 2
+// e. Shipping charges
+// Compute the total cost & show the receipt in your browser.
