@@ -244,3 +244,19 @@ document.write(F+"&#8457;"+" is "+C+"&#8451;"+"<br>");
 // d. Ordered Quantity of item 2
 // e. Shipping charges
 // Compute the total cost & show the receipt in your browser.
+
+document.write("<h1>Shopping Cart</h1>"+"<br>");
+var price1 =650;
+var price2=100;
+var quantity1=3;
+var quantity2=7;
+var shipping=100;
+var totalOrderCost=(price1*quantity1)+(price2*quantity2)+shipping;
+document.write("Price of item 1 is "+price1+"<br>");
+document.write("Quantity of item 1 is "+quantity1+"<br>");
+document.write("Price of item 2 is "+price2+"<br>");
+document.write("Quantity of item 2 is "+quantity2+"<br>");
+document.write("Shippin Charges "+shipping+"<br>");
+document.write("Total cost of your order is "+totalOrderCost+"<br>");
+
+//
