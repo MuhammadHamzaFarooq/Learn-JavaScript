@@ -187,7 +187,7 @@ var x;
 document.write("Value after declaration is "+x+"<br> <br>");
 x=5;
 document.write("Initial value "+x+"<br> <br>");
-x++;
+x=x+1;
 
 document.write("Value after increment is "+x+"<br> <br>");
 x=x+7;
@@ -259,4 +259,200 @@ document.write("Quantity of item 2 is "+quantity2+"<br>");
 document.write("Shippin Charges "+shipping+"<br>");
 document.write("Total cost of your order is "+totalOrderCost+"<br>");
 
-//
+// //Q-8 8. Store total marks & marks obtained by a student in 2
+// variables. Compute the percentage & show the result in
+// your browser
+document.write("<h1>Marks Sheet</h1>"+"<br>");
+var totalMrak =980;
+var obtainedMrak =804;
+var percentage = obtainedMrak/totalMrak*100;
+document.write("Total Marks : "+totalMrak+"<br>");
+document.write("Obtained Marks : "+obtainedMrak+"<br>");
+document.write("Percentage : "+percentage+"%"+"<br>");
+
+
+// //Q9 -9. Assume we have 10 US dollars & 25 Saudi Riyals. Write a
+// script to convert the total currency to Pakistani Rupees.
+// Perform all calculations in a single expression.
+// (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee
+// and 1 Saudi Riyal = 28 Pakistani Rupee)
+var SaudiRiyalInPKR=28;
+var SaudiRiyal=25;
+var dolllarInPKR =104.80;
+var $=10;
+var totalCurrency=(SaudiRiyal*SaudiRiyalInPKR)+(dolllarInPKR*$);
+document.write("Total Currency in PKR : "+totalCurrency+"<br>");
+
+// //Q9 -10. Write a program to initialize a variable with some
+// number and do arithmetic in following sequence:
+// a. Add 5
+// b. Multiply by 10
+// c. Divide the result by 2
+// Perform all calculations in a single expression
+var number=19;
+number +=5;
+number *=10;
+number /= 2;
+
+//Q10 -11. The Age Calculator: Forgot how old someone is?
+// Calculate it!
+// a. Store the current year in a variable.
+// b. Store their birth year in a variable.
+// c. Calculate their 2 possible ages based on the stored
+// values
+
+document.write("<h1>Age Calculator</h1>"+"<br>");
+var currentYear = 2016
+var birthYear = 1992;
+var currentAge= currentYear-birthYear;
+document.write("Current Year : "+currentYear+"<br>");
+document.write("Brith Year : "+birthYear+"<br>");
+document.write("Your Age is : "+currentAge+"<br>");
+
+
+// //12. The Geometrizer: Calculate properties of a circle.
+// a. Store a radius into a variable
+// b. Calculate the circumference based on the radius, and
+// output “The circumference is NN”.
+// (Hint : Circumference of a circle = 2 π r , π = 3.142)
+// Calculate the area based on the radius, and output “The
+// area is NN”. (Hint : Area of a circle = π r2, π = 3.142)
+
+document.write("<h1>The Geometrizer</h1>"+"<br>");
+var radius =20;
+var circumference = 2 *3.142*radius;
+var area = 3.142*(Math.sqrt(radius));
+document.write("Radius Of Circle : "+radius+"<br>");
+document.write("The circumference is : "+circumference+"<br>");
+document.write("The area is : "+area+"<br>");
+
+
+
+// //Q13 - 13. The Lifetime Supply Calculator: Ever wonder how
+// much a “lifetime supply” of your favorite snack is?
+// Wonder no more.
+// a. Store your favorite snack into a variable
+// b. Store your current age into a variable.
+// c. Store a maximum age into a variable.
+// d. Store an estimated amount per day (as a number).
+// e. Calculate how many would you eat total for the rest of
+// your life.
+// Output the result to the screen like so: “You will need
+// NNNN to last you until the ripe old age of NN”.
+
+
+document.write("<h1>The Lifetime Supply Calculator</h1>"+"<br>");
+var snack ="chocolate chip";
+var currentAge =15;
+var maxAge=65;
+var amountSnackPerDay =3;
+var remainingLife = 65-15;
+var remainingDays=remainingLife*365;
+var resOfLife=remainingDays*amountSnackPerDay;
+document.write("You will need  "+resOfLife+" "+snack+" to last you until the ripe old age of "  +maxAge+"<br>");
+
+
+//        ========================= Chapter6-9 (MATH EXPRESSIONS ) =================
+
+// //Q1 -1. Write a program to take a number in a variable, do the
+// required arithmetic to display the following result in your
+// browser:
+
+var num= 10;
+document.write("Result :"+"<br>");
+document.write("The value of a is :" +num +"<br>");
+document.write("----------------------------------"+"<br>");
+
+++num;
+document.write("The value of ++a is :" +num +"<br>");
+document.write("Now the value of a is :" +num +"<br><br>");
+
+num++;
+document.write("The value of a++ is :" +num +"<br>");
+document.write("Now the value of a is :" +num +"<br><br>");
+
+
+
+--num;
+document.write("The value of --a is :" +num +"<br>");
+document.write("Now the value of a is :" +num +"<br><br>");
+
+num--;
+document.write("The value of a-- is :" +num +"<br>");
+document.write("Now the value of a is :" +num +"<br><br>");
+
+
+//Q2 -2. What will be the output in variables a, b & result after
+// execution of the following script:
+// var a = 2, b = 1;
+// var result = --a - --b + ++b + b--;
+// Explain the output at each stage:
+// --a;
+// --a - --b;
+// --a - --b + ++b;
+// --a - --b + ++b + b--
+
+var a =2,b=1;
+var result= --a - --b + ++b + b--;
+a--;
+--a - --b 
+--a - --b + ++b ;
+--a - --b + ++b + b--;
+
+
+document.write("a is :" +a +"<br>")
+document.write("b is :" +b +"<br>")
+document.write("result is :" +result +"<br>")
+
+
+//Q3 -3. Write a program that takes input a name from user & greet the user.
+var name=prompt("Enter your name");
+alert(name);
+
+// //Q5 -5. Write a program to take input a number from user &
+// display it’s multiplication table on your browser. If user
+// does not enter a new number, multiplication table of 5
+// should be displayed by default.
+
+var tableNum=+prompt("please enter a number for multiplcation table");
+var defaultNum=5;
+for( var j=0;j<=1;j++){
+    if(j=1&& tableNum===tableNum){
+        for(var k=1; k<=10;k++){
+    
+            document.write(defaultNum +" "+"x"+" "+k +" "+"="+" "+(defaultNum*k) +"<br> ");
+        }
+    }
+    for(var r=1; r<=10;r++){
+    
+    document.write(tableNum +" "+"x"+" "+r +" "+"="+" "+(tableNum*r) +"<br> ");
+}
+
+}
+
+document.write("<br> <br> <br>");
+
+
+// Q6 -6. Take
+// a) Take three subjects name from user and store them in 3
+// different variables.
+// b) Total marks for each subject is 100, store it in another
+// variable.
+// c) Take obtained marks for first subject from user and
+// stored it in different variable
+// d) Take obtained marks for remaining 2 subjects from user
+// and store them in variables.
+// e) Now calculate total marks and percentage and show the
+// result in browser like this.(Hint: user table)
+
+var eng=54;
+var urdu=48;
+var math =54;
+var marks=100;
+var percentage1=(eng/marks*100);
+var percentage2=(urdu/marks*100);
+var percentage3=(math/marks*100);
+document.write("<h4>Subject     Total Marks   Obtained Marks    Percentage <h4> "+"<br><br>");
+document.write("English   "+marks+"   "+eng+"     "+percentage1+"%" +"<br><br>");
+document.write("Math   "+marks+"   "+math+"     "+percentage3+"%"+"<br><br>");
+document.write("Urdu   "+marks+"   "+urdu+"     "+percentage2+"%"+"<br><br>");
