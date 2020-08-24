@@ -682,3 +682,115 @@ if(operator=="+"){
 }else if (operator=="%"){
     alert("reminder is "+(val1%val2));
 }
+
+
+//        ========================= Chapter12-13 (IF…ELSE & ELSE IF STATEMENT,TESTING SET OF CONDITIONS ) =================
+
+//Q1 - 1. Write a program that takes a character (number or string)
+//  in a variable & checks whether the given input is a
+// number, uppercase letter or lower case letter. (Hint: ASCII
+// codes:- A=65, Z=90, a=97, z=122).
+
+var c1="A"
+var c2="a";
+var c3="Z";
+var c4= "z";
+
+if(c1==="A"){
+   console.log("user input is uppercase letter "+ c1);
+}else if(c1===65){
+    console.log("user input is Number "+ c1);
+}
+else if(c3==="Z"){
+   console.log("user input is uppercase letter "+ c1);
+}else if(c3===90){
+    console.log("user input is Number "+ c1);
+}
+else if(c2==="a"){
+   console.log("user input is lowercase letter "+ c1);
+}else if(c2===97){
+    console.log("user input is Number "+ c1);
+}
+else if(c4==="z"){
+    console.log("user input is lowercase letter "+ c1);
+ }else if(c4===122){
+     console.log("user input is Number "+ c1);
+ }
+
+//Q2 -2. Write a JavaScript program that accept two integers 
+// and display the larger. Also show if the two integers are equal.
+
+var integer1=+prompt("Please enter a first integer");
+var integer2=+prompt("Please enter a Second integer");
+
+if(integer1>integer2){
+    console.log(integer1+" "+" is greater than "+integer2);
+}else if(integer2>integer1){
+    console.log(integer2+" "+" is greater than "+integer1);    
+}else if(integer1===integer2){
+    console.log(integer1+" "+" is equal to  "+integer2);    
+}
+
+//Q3 -3. Write a program that takes input a number from user &
+//state whether the number is positive, negative or zero.
+
+var number=+prompt("please enter a number");
+if(number > 0){
+    console.log("Number is positive");
+} else if(number < 0){
+    console.log("Number is negative");
+}else if(number ==0){
+console.log("Number is equal to zero");
+}
+
+//Q4 -4. Write a program that takes a character (i.e. string of
+// length 1) and returns true if it is a vowel, false otherwise
+var  _character = prompt("Enter a character");
+
+if(_character==="A"||_character=="a" || _character=="E" || _character=="e"|| _character==="I" || _character==="i" || _character==="O" || _character==="o" || _character==="U" || _character==="u"){
+    console.log(_character+" "+"is vowel " );
+}else{
+    console.log(_character+" "+"is consunent " );
+}
+
+// //Q5-5. Write a program that
+// a. Store correct password in a JS variable.
+// b. Asks user to enter his/her password
+// c. Validate the two passwords:
+// i. Check if user has entered password. If not, then
+// give message “ Please enter your password”
+// ii. Check if both passwords are same. If they are
+// same, show message “Correct! The password you
+// entered matches the original password”. Show
+// “Incorrect password” otherwise.
+
+var password = "ziyad123";
+var input = prompt("Please enter your password");
+if(password ===input){
+    console.log("Correct!");
+}else{
+    console.log("Invalid password");
+}
+
+//Q6 - 6. This if/else statement does not work. Try to fix it:
+// var greeting;
+// var hour = 13;
+// if (hour < 18) {
+// greeting = "Good day";
+// else
+// greeting = "Good evening";
+// }
+
+var greeting ;
+var hour =13;
+if(hour < 18) {
+    greeting="Good day";
+}else{
+    greeting = "Good evening";
+}
+
+var hourse =1200;
+var input=+prompt("enter your time ");
+if(hourse ==input1){
+
+}
