@@ -28,6 +28,7 @@
            qualifications in your browser like:
         */
 
+
         let studentNames = [];
 
         studentNames = ["Muhammad Hamza Farooq", "Mirza Ziyad "];
@@ -42,102 +43,168 @@
         let mixed = ["Pakistan ", "karachi", 99.083];
         console.log(mixed);
 
-        let education = ["SSC","HSC","BCS","BS","BCOM","MS","M. Phil.","PhD"];
+        let education = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
         console.log(education);
 
 
         /*
-         Q2 => 
-            Write a program to store 3 student names in an array.Take
-            another array to store score of these three students.
-            Assume that total marks are 500 for each student, display
-            the scores & percentages of students like:
+            Q2 =>
+              Write a program to store 3 student names in an array.Take
+              another array to store score of these three students.
+              Assume that total marks are 500 for each student, display
+              the scores & percentages of students like:
+          */
 
-
-        */
-
-
-        let Stdnames =["rafay","sufyan","ziyad"];
-        let scores = [97,88,99] ;
+        let Stdnames = ["rafay", "sufyan", "ziyad"];
+        let scores = [97, 88, 99];
         let totalMarks = 500;
 
-        let percentageRafay = (scores[0]/totalMarks)*100;
-        console.log("Student name is : "+Stdnames[0]+" "+"Score is :"+scores[0]+" "+"percentage is :"+ percentageRafay);
+        let percentageRafay = (scores[0] / totalMarks) * 100;
+        console.log("Student name is : " + Stdnames[0] + " " + "Score is :" + scores[0] + " " + "percentage is :" + percentageRafay);
 
-        let percentageSufyan = (scores[1]/totalMarks)*100;
-        console.log("Student name is : "+Stdnames[1]+" "+"Score is :"+scores[1]+" "+"percentage is :"+ percentageSufyan);
+        let percentageSufyan = (scores[1] / totalMarks) * 100;
+        console.log("Student name is : " + Stdnames[1] + " " + "Score is :" + scores[1] + " " + "percentage is :" + percentageSufyan);
 
-        let percentageZiyad = (scores[2]/totalMarks)*100;
-        console.log("Student name is : "+Stdnames[2]+" "+"Score is :"+scores[2]+" "+"percentage is :"+ percentageSufyan);
+        let percentageZiyad = (scores[2] / totalMarks) * 100;
+        console.log("Student name is : " + Stdnames[2] + " " + "Score is :" + scores[2] + " " + "percentage is :" + percentageSufyan);
 
         /*
-         Q3 => 
-            Initialize an array with color names. Display the array
-            elements in your browser.
-            a. Ask the user what color he/she wants to add to the
-            beginning & add that color to the beginning of the array.
-            Display the updated array in your browser.
-            b. Ask the user what color he/she wants to add to the end
-            & add that color to the end of the array. Display the
-            updated array in your browser.
-            c. Add two more color to the beginning of the array.
-            Display the updated array in your browser.
-            d. Delete the first color in the array. Display the updated
-            array in your browser.
-            e. Delete the last color in the array. Display the updated
-            array in your browser.
-            f. Ask the user at which index he/she wants to add a color
-            & color name. Then add the color to desired
-            position/index. . Display the updated array in your
-            browser.
-            g. Ask the user at which index he/she wants to delete
-            color(s) & how many colors he/she wants to delete. Then
-            remove the same number of color(s) from user-defined
-            position/index. . Display the updated array in your
-            browser.
+                 Q3 => 
+                    Initialize an array with color names. Display the array
+                    elements in your browser.
+                    a. Ask the user what color he/she wants to add to the
+                    beginning & add that color to the beginning of the array.
+                    Display the updated array in your browser.
+                    b. Ask the user what color he/she wants to add to the end
+                    & add that color to the end of the array. Display the
+                    updated array in your browser.
+                    c. Add two more color to the beginning of the array.
+                    Display the updated array in your browser.
+                    d. Delete the first color in the array. Display the updated
+                    array in your browser.
+                    e. Delete the last color in the array. Display the updated
+                    array in your browser.
+                    f. Ask the user at which index he/she wants to add a color
+                    & color name. Then add the color to desired
+                    position/index. . Display the updated array in your
+                    browser.
+                    g. Ask the user at which index he/she wants to delete
+                    color(s) & how many colors he/she wants to delete. Then
+                    remove the same number of color(s) from user-defined
+                    position/index. . Display the updated array in your
+                    browser.
+        
+                */
 
-        */ 
+        let colors = [];
+        let first = prompt("what color he/she wants to add to the beginning array");
+
+        if (colors.length < 1 || colors == undefined) {
+            colors.push(first);
+            console.log(colors);
+        }
+        else if (colors.length >= 1) {
+            colors.unshift(first);
+            console.log(colors);
+        }
+        else if (colors.length > 1) {
+            console.log(colors + " " + "colors exits in our array");
+            let end = prompt("what color he/she wants to add to the end array");
+            colors.shift(end);
+        }
+        let i = parseInt(prompt("Enter your color names quntities in no form to add beginning of array"));
+        for (let j = 1; j <= i; j++) {
+            let colorsname = prompt("please enter your colors" + " " + j + " names to add beginning of array ");
+            colors.unshift(colorsname);
+            console.log(colors);
+        }
+
+        let city = ["karachi", "Lahore", "Multan", "Islamabad", "Quetta", "Multan"];
+        console.log(city);
+        city.shift();
+        console.log(city);
+        let country = ["Pakistan", "India", "UAE", "Srilanka", "Aghanistan", "Dubai"];
+        console.log(country);
+        let index = parseInt(prompt("Enter your desired index  no who wants to add country name please check then add ", country));
+        let elementsNo = parseInt(prompt("Enter your element quantity in no who wants to delete in country array"));
+        let countryNames = prompt("Enter your country name who wants to add");
+
+        country.splice(index, elementsNo, countryNames);
+        console.log(country);
+
+        country.splice(index, elementsNo);
+        console.log(country);
 
         /*
          Q4 => 
-            Write a program to store student scores in an array &
-            sort the array in ascending order using Array’s sort
-            method.
+         Write a program to store student scores in an array &
+         sort the array in ascending order using Array’s sort
+         method.
+        */
+        let stdScores = [29, 33.4, 2, 3, 48, 23, 37];
+        console.log(stdScores + " Unsorted data");
+        let sortdata = stdScores.sort();
+        console.log(sortdata);
 
-        */ 
+        /*   
+         Q5 =>
+        Write a program to initialize an array with city names.
+        Copy 3 array elements from cities array to selectedCities
+        array.*/
 
-        /*
-         Q5 => 
-                Write a program to initialize an array with city names.
-                Copy 3 array elements from cities array to selectedCities
-                array.
+        let cities = ["karachi", "Lahore", "Quetta", "Multan", "Islamabad"];
+        console.log(cities);
+        console.log(cities.slice(3, 4));
 
-
-        */ 
 
         /*
          Q6 => 
                 Write a program to create a single string from the
                 below mentioned array:
                 var arr = [“This ”, “ is ”, “ my ”, “ cat”];
-                (Use array’s join method)    
-
-        */ 
+               (Use array’s join method)    
+ 
+        */
+        var arr = ["This", "is", "my", "cat"];
+        console.log(arr.join(" "));
 
         /*
          Q7 => 
                 Create a new array. Store values one by one in such a way
                 that you can access the values in the order in which they
                 were stored. (FIFO-First In First Out)
-
-        */ 
+ 
+        */
+        let name = [];
+        name.push("babar azam");
+        name.push("smith");
+        name.push("jhon");
+        name.push("kohli");
+        console.log(name);
+        name.shift();
+        console.log(name);
+        name.shift();
+        console.log(name);
+        name.shift();
+        console.log(name);
+        name.shift();
+        console.log(name);
 
         /*
         Q8 =>
-
+ 
             Create a new array. Store values one by one in such a way
             that you can access the values in reverse order. (Last InFirst Out)
         */
+
+        let team = [];
+        team.push("Lahore");
+        team.push("Quetta");
+        team.push("Islamabad");
+        team.push("Multan");
+        team.push("Karachi");
+        console.log(team);
+        console.log(team.reverse());
 
         /*
         Q9 =>
@@ -148,8 +215,12 @@
           
         */
 
-    </script>
+        let phone = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+        for (let k = 0; k < phone.length; k++) {
+            document.write(phone[k] + "<br>");
+        }
 
+    </script>
 </body>
 
 </html>
