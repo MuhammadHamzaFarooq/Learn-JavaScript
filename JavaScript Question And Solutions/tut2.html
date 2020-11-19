@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF…ELSE & ELSE IF STATEMENT,
+        TESTING SET OF CONDITIONS</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>IF…ELSE & ELSE IF STATEMENT,
+            TESTING SET OF CONDITIONS</h1>
+    </div>
+
+    <script>
+        /*
+        Q1 => 
+              Write a program that takes a character (number or string)
+                in a variable & checks whether the given input is a
+                number, uppercase letter or lower case letter. (Hint: ASCII
+                codes:- A=65, Z=90, a=97, z=122). 
+        */
+
+        let char = prompt("Enter a characher");
+
+        switch (char) {
+            case 'a': {
+                console.log(char + " lowercase");
+                break;
+            }
+            case 'A': {
+                console.log(char + " uppercase");
+                break;
+            }
+            case 'z': {
+                console.log(char + " lowercase");
+                break;
+            }
+            case 'Z': {
+                console.log(char + " uppercase");
+                break;
+            }
+            case '97': {
+                console.log(char + " number");
+                break;
+            }
+            case '65': {
+                console.log(char + " number");
+                break;
+            }
+            case '90': {
+                console.log(char + " number");
+                break;
+            }
+            case '122': {
+                console.log(char + " number");
+                break;
+            }
+        }
+
+        /*
+        Q2 =>  
+            Write a JavaScript program that accept two integers and
+            display the larger. Also show if the two integers are equal
+        
+        */
+        let num1 = prompt("Enter a first number");
+        let num2 = prompt("Enter a second number");
+        if (num1 > num2) {
+            console.log(num1 + " is greater than " + num2);
+        }
+        else if (num2 > num1) {
+            console.log(num1 + " is greater than " + num2);
+        }
+        else if (num2 === num1) {
+            console.log(num1 + " is equal to " + num2);
+        }
+
+        /*
+        Q3 => 
+            Write a program that takes input a number from user &
+            state whether the number is positive, negative or zero.
+        
+        */
+        let no = parseInt(prompt("enter a number"));
+        if (no > 0) {
+            console.log(no + " " + " is positve");
+        }
+        else {
+            console.log(no + " " + " is negative");
+        }
+
+
+        /*
+        Q4 => 
+           Write a program that takes a character (i.e. string of
+            length 1) and returns true if it is a vowel, false otherwise
+
+        
+        */
+        let character = prompt("Enter a character");
+        if (character.length === 1) {
+            console.log("true");
+        }
+        else if (character == 'a' || character == 'A' || character == 'E' || character == 'e' || character == 'i' || character == 'o' || character == 'O' || character == 'u' || character == 'U') {
+            console.log("true");
+        }
+        else {
+            console.log("false");
+        }
+
+        /*
+        Q5 => 
+             Write a program that
+                a. Store correct password in a JS variable.
+                b. Asks user to enter his/her password
+                c. Validate the two passwords:
+                i. Check if user has entered password. If not, then
+                give message “ Please enter your password”
+                ii. Check if both passwords are same. If they are
+                same, show message “Correct! The password you
+                entered matches the original password”. Show
+                “Incorrect password” otherwise
+         */
+
+        let password = "Hamza123";
+        let message = prompt("Enter your password");
+        if (message == password) {
+            console.log("Correct! password");
+        }
+        else if (message == "") {
+            let message1 = prompt("Please Enter your password");
+            if (message1 == password) {
+                console.log("Correct! password");
+            }
+            else if (message1 = !password) {
+                console.log("Incorrect Password.");
+            }
+        }
+        else if (message != password) {
+            console.log("Incorrect Password.");
+
+        }
+
+
+
+
+
+
+
+
+        /*
+        Q6 =>  
+            This if/else statement does not work. Try to fix it:
+                var greeting;
+                var hour = 13;
+                if (hour < 18) {
+                greeting = "Good day";
+                else
+                greeting = "Good evening";
+                }
+                        
+        */
+        var greeting;
+        var hour = 23;
+        if (hour < 18) {
+            greeting = "Good day";
+            console.log(greeting);
+        }
+        else {
+            greeting = "Good evening";
+            console.log(greeting);
+        }
+
+
+
+        /*
+        Q7 => 
+            Write a program that takes time as input from user in 24
+            hours clock format like: 1900 = 7pm. Implement the
+            following case using if, else & else if statements
+        */
+        let time = parseInt(prompt("Please Enter Your Time In This 'clock format like: 1900 = 7pm.'"));
+        if (time == 1200) {
+            console.log("your clock time is = " + "12pm.");
+        }
+        else if (time == 1300) {
+            console.log("your clock time is = " + "1pm.");
+        }
+        else if (time == 1400) {
+            console.log("your clock time is = " + "2pm.");
+        }
+        else if (time == 1500) {
+            console.log("your clock time is = " + "3pm.");
+        }
+        else if (time == 1600) {
+            console.log("your clock time is = " + "4pm.");
+        }
+        else if (time == 1700) {
+            console.log("your clock time is = " + "5pm.");
+        }
+        else if (time == 1800) {
+            console.log("your clock time is = " + "6pm.");
+        }
+        else if (time == 1900) {
+            console.log("your clock time is = " + "7pm.");
+        }
+        else if (time == 2000) {
+            console.log("your clock time is = " + "8pm.");
+        }
+        else if (time == 2100) {
+            console.log("your clock time is = " + "9pm.");
+        }
+        else if (time == 2200) {
+            console.log("your clock time is = " + "10pm.");
+        }
+        else if (time == 2300) {
+            console.log("your clock time is = " + "11pm.");
+        }
+        else if (time == 2400) {
+            console.log("your clock time is = " + "12am.");
+        }
+
+    </script>
+</body>
+
+</html>
