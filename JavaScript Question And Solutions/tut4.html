@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays And Loops</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Arrays And Loops</h1>
+    </div>
+
+    <script>
+        /*
+         Q1 =>
+                Declare and initialize an empty multidimensional array.
+                (Array of arrays)
+        */
+        let mulitDimentionalArray = [[], [], []];
+
+        /*
+         Q2 =>
+         Declare and initialize a multidimensional array
+         representing the following matrix:
+         
+        */
+
+        let twoDimentionalArray = [[1, 2], [3, 4]];
+
+
+
+        /*
+         Q3 =>
+         . Write a program to print numeric counting from 1 to 10.
+        */
+        for (let i = 0; i <= 10; i++) {
+            console.log(i);
+        }
+
+        /*
+         Q4 =>
+                Write a program to print multiplication table of any
+                number using for loop. Table number & length should be
+                taken as an input from user.
+        */
+
+        let tableNo = parseInt(prompt("Please Enter your table no "));
+        let start = parseInt(prompt("Enter your table starting  no"));
+        let end = parseInt(prompt("Enter your table ending  no"));
+
+        for (let j = start; j <= end; j++) {
+            console.log(tableNo + " x " + j + " = " + (tableNo * j));
+        }
+        /*
+         Q5 =>
+                Write a program to print items of the following array
+                using for loop:
+                fruits = [“apple”, “banana”, “mango”, “orange”,
+                “strawberry”]
+        */
+        let fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+        for (let l = 0; l < fruits.length; l++) {
+            console.log(fruits[l]);
+        }
+
+
+        /*
+         Q6 =>
+                Generate the following series in your browser. See
+                example output.
+                a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+                b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+                c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+                d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+                e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
+        */
+        for (let a = 0; a <= 15; a++) {
+            console.log(a);
+        }
+        for (let b = 10; b >= 1; b--) {
+            console.log(b);
+        }
+
+
+        for (let c = 0; c <= 20; c++) {
+            if (c === 0) {
+                console.log(c);
+            }
+            else if (c % 2 === 0) {
+                console.log(c);
+            }
+        }
+
+        for (let d = 0; d <= 20; d++) {
+
+            if (d % 2 == !0) {
+                console.log(d);
+            }
+        }
+
+        for (let e = 1; e <= 20; e++) {
+
+
+            if (e % 2 === 0) {
+                console.log(e + "k");
+            }
+        }
+
+        /*
+         Q7 =>
+            You have an array
+            A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”]
+            Write a program to enable “search by user input” in an
+            array.
+            After searching, prompt the user whether the given item is
+            found in the list or not. Example:
+        */
+        let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        let item = prompt("search your desired item");
+        for (let f = 0; f < A.length; f++) {
+            if (A[f] == item) {
+                console.log(A[f] + " is found");
+            }
+            break;
+
+            switch (f) {
+                case f: {
+                    console.log("Not Found");
+                }
+            }
+
+        }
+
+        /*
+         Q8 =>
+                Write a program to identify the largest number in the
+                given array.
+                A = [24, 53, 78, 91, 12].
+        */
+        let numberArr = [24, 53, 78, 91, 12];
+        let maxno = Math.max.apply(null, numberArr);
+        console.log(maxno);
+        /*
+         Q9 =>
+            Write a program to identify the smallest number in the
+            given array.
+            A = [24, 53, 78, 91, 12]
+        */
+        let minno = Math.min.apply(null, numberArr);
+        console.log(minno);
+
+        /*
+         Q10 =>
+                Write a program to print multiples of 5 ranging 1 to
+                100.
+        */
+
+        let num = parseInt(prompt("Enter a number"));
+        let fivetimesdouble = num * 5;
+        console.log(fivetimesdouble);
+
+    </script>
+</body>
+
+</html>
