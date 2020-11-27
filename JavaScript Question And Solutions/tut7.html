@@ -19,8 +19,8 @@
             your browser.
         */
 
-        let dt = new Date(2018, 11, 24, 10, 33, 30, 0);
-        alert(dt)
+        let dt = new Date();
+        alert(dt);
 
 
         /*
@@ -51,7 +51,13 @@
             Write a program that displays a message “It’s Fun day” if
             its Saturday or Sunday today.
         */
-
+        let dt3 = new Date();
+        let days1 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let val = days1[dt3.getDay()];
+        if (val == "Saturday" || val == "Sunday") {
+            console.log("It's Fun day");
+        }
+        console.log(val);
 
         /*
         Q5 =>
@@ -60,6 +66,14 @@
             else shows “Last days of the month”.
 
         */
+        let dt4 = new Date();
+        let val1 = dt4.getDate();
+        if (val1 < 16) {
+            console.log("First fifteen days of the month");
+        } else {
+            console.log("Last days of the month");
+        }
+
         /*
         Q6 =>
             Write a program that determines the minutes since
@@ -67,45 +81,113 @@
             hasn't been declared beforehand. Use any variable you like
             to represent the Date object.
         */
+
+        var date = new Date();
+        document.write("Current Date: " + date + "<br>" + "<br>");
+        var milliSecondsSinceJan1_1970 = date.getTime();
+        document.write("Ellapsed milliseconds since January 1, 1970: " + milliSecondsSinceJan1_1970 + "<br>" + "<br>");
+        var minutesSinceJan1_1970 = (milliSecondsSinceJan1_1970 / 60000);
+        document.write("Ellapsed minutes since January 1, 1970: " + minutesSinceJan1_1970 + "<br>" + "<br>");
+
+        let dt5 = new Date("Jan 1, 1970 01:15:00");
+        console.log(dt5);
+
         /*
         Q7 =>
             Write a program that tests whether it's before noon and
             alert “Its AM” else “its PM”.
         */
+        let date1 = new Date();
+        let amOrpm = date1.getHours();
+        console.log(amOrpm);
+        if (amOrpm < 12) {
+            console.log("its AM");
+        } else {
+            console.log("its PM");
+        }
+
         /*
         Q8 =>
             Write a program that creates a Date object for the last day
             of the last month of 2020 and assigns it to variable named
             laterDate.
         */
+        let laterDate = new Date("Dec 31 2020");
+        console.log(laterDate);
+
+
         /*
         Q9 =>
             Create a date object of the starting date of this Ramadan
             and alert the number of days past since 1st Ramadan?
             Note: 1st Ramadan was on June 18, 2015
         */
+
+        let first_ramadan = new Date("June 18 2015");
+        let first_ramadan_mili = first_ramadan.getTime();
+        let TodayDate = new Date();
+        let TodayDateMili = TodayDate.getTime();
+        let diff = TodayDateMili - first_ramadan_mili;
+        let day = diff / (1000 * 60 * 60 * 24);
+        let daysAcc = Math.floor(day);
+        console.log(daysAcc + " days have passed since 1st Ramadan, 2015");
         /*
         Q10 =>
             Write a program that displays in your browser the
             seconds that elapsed between the reference date and the
             beginning of 2015.
         */
+        let reff = new Date("Jan 18 2015");
+        let reffMili = reff.getTime();
+        let currentDate = new Date();
+        let currentMili = currentDate.getTime();
+        let diff2 = currentMili - reffMili;
+        let reffSec = diff2 / (1000 * 60);
+        let AccReffSec = Math.floor(reffSec);
+        console.log("On Reference date " + reff + " " + AccReffSec +
+            " seconds had passed since begining of 2015");
+
         /*
-        Q11 =>
-            Write a program that displays in your browser the
-            seconds that elapsed between the reference date and the
-            beginning of 2015.
+          Q11 =>
+            Create a Date object for the current date and time.
+            Extract the hours, reset the date object an hour ahead and
+            finally display the date object in your browser.
         */
+        let date6 = new Date();
+        let hoursDate = date6.getHours();
+        console.log("Hours " + hoursDate);
+
+
         /*
         Q12 =>
-            Write a program that creates a date object and show the
+            write a program that creates a date object and show the
             date in an alert box that is reset to 100 years back?
         */
+        let date100year = new Date("Nov 23 1921");
+        console.log(date100year);
+
+
+
         /*
         Q13 =>
             Write a program to ask the user about his age. Calculate
             and show his birth year in your browser.
         */
+        let dob = prompt("Enter your date of birth ", "July 19 ,1999");
+        let dts = new Date(dob);
+        let dobmili = dts.getTime();
+
+        let dates = new Date();
+        let datemili = dates.getTime();
+
+        let diff1 = datemili - dobmili;
+        let year = diff1 / (1000 * 60 * 60 * 24 * 30 * 12);
+        let accyear = Math.floor(year);
+
+        console.log(accyear);
+
+
+
         /*
         Q14 =>
             Write a program to generate your K-Electric bill in your
@@ -122,6 +204,20 @@
             Net Amount Payable (within Due Date) = Number of units * Charges per unit
             & Gross Amount Payable (after Due Date) = Net Amount + Late Payment Surcharge
         */
+
+        let CustomerName = "Muhammad Hamza Farooq";
+        let CurrentDate = new Date();
+        let CurrentMonth = CurrentDate.getMonth();
+        let NumberOfUnits = 300;
+        let ChargesPerUnits = 20;
+        let NetAmount = NumberOfUnits * ChargesPerUnits;
+        let late_payment_surcharges = 50;
+        console.log("Customer Name: " + CustomerName + " Month: " + CurrentMonth + "  Number Of Units: " +
+            NumberOfUnits +
+            "Charges per Unit: " + ChargesPerUnits +
+            "  Net Amount Payable(within Due Date): " + NumberOfUnits * ChargesPerUnits +
+            "  Late Payment Surcharges: " + late_payment_surcharges + "  Gross Amount Payable(after Due Date): " +
+            ((NumberOfUnits * ChargesPerUnits) + late_payment_surcharges));
     </script>
 </body>
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Methods</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Maths Objects</h1>
+        <script>
+            /*
+               Q1 =>
+                    Write a program that takes a positive integer from user &
+                    display the following in your browser.
+                    a. number
+                    b. round off value of the number
+                    c. floor value of the number
+                    d. ceil value of the number               
+            */
+            let integerPositive = parseInt(prompt("Enter your positive integer"));
+            console.log(integerPositive);
+
+            let number = 21.6737;
+            let roundnum = Math.round(number);
+            let floornum = Math.floor(number);
+            let ceilnum = Math.ceil(number);
+            console.log(number);
+            console.log(roundnum);
+            console.log(floornum);
+            console.log(ceilnum);
+
+            /*
+               Q2 =>
+                    Write a program that takes a negative floating point
+                    number from user & display the following in your browser.
+                    a. number
+                    b. round off value of the number
+                    c. floor value of the number
+                    d. ceil value of the number
+            */
+            let floatNegative = parseInt(prompt("Enter your negative integer"));
+
+            let roundnum1 = Math.round(floatNegative);
+            let floornum1 = Math.floor(floatNegative);
+            let ceilnum1 = Math.ceil(floatNegative);
+
+            console.log(floatNegative);
+            console.log(roundnum1);
+            console.log(floornum1);
+            console.log(ceilnum1);
+
+
+            /*
+               Q3 =>
+                    Write a program that displays the absolute value of a
+                    number.
+                    E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+            */
+
+            let num2 = -4;
+            console.log("absolute value of -4 is : ", Math.abs(num2));
+
+            let num3 = 5;
+            console.log("absolute value of -5 is : ", Math.abs(num3));
+            /*
+               Q4 =>
+                    Write a program that simulates a dice using random()
+                    method of JS Math class. Display the value of dice in your
+                    browser.
+            */
+            let val1 = 1;
+            let val2 = 6;
+            let dice = val1 + (val2 - val1) * Math.random();
+            console.log("dice no is : ", Math.round(dice));
+            /*
+               Q5 =>
+                    Write a program that simulates a coin toss using random()
+                    method of JS Math class. Display the value of coin in your
+                    browser
+            */
+            let head = "Head";
+            let tail = "Tail"
+            let coin = Math.random();
+            console.log(coin);
+
+            /*
+               Q6 =>
+                    Write a program that shows a random number between 1
+                    and 100 in your browser.
+            */
+            let range1 = 1;
+            let range100 = 100;
+            let range1_100 = range1 + (range100 - range1) * Math.random();
+            console.log(Math.round(range1_100));
+            /*
+               Q7 =>
+                    Write a program that asks the user about his weight. Parse
+                    the user input and display his weight in your browser.
+                    Possible user inputs can be:
+                    a. 50
+                    b. 50kgs
+                    c. 50.2kgs
+                    d. 50.2kilograms
+            */
+
+
+            /*
+               Q8 =>
+                    Write a program that stores a random secret number from
+                    1 to 10 in a variable. Ask the user to input a number
+                    between 1 and 10. If the user input equals the secret
+                    number, congratulate the user.
+            */
+            let secret = 6;
+            let uerno = parseInt(prompt("guess your secret no b/w 1-10"));
+            if (secret === uerno) {
+                console.log("congratulate")
+            } else {
+                console.log("Sorry ! please try agin")
+            }
+        </script>
+    </div>
+</body>
+
+</html>
