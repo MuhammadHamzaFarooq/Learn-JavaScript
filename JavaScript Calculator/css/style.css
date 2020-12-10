@@ -1,0 +1,41 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.container {
+    text-align: center;
+    margin-top: 23px;
+}
+
+table {
+    margin: auto;
+}
+
+input {
+    font-size: 34px;
+    height: 45px;
+    border: 2px solid black;
+    border-radius: 20px;
+    outline: none;
+
+}
+
+button {
+    font-size: 25px;
+    /* background-color: blue; */
+    width: 102px;
+    height: 53px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.calculator{
+      display: inline-block;
+    border: 2px solid black;
+    border-radius: 57px;
+    padding: 23px;
+    background-color: rebeccapurple;
+}
