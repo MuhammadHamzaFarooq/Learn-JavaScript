@@ -28,7 +28,8 @@
 
                 </ul>
                 <form class="d-flex">
-                    <input  id="searchTxt"  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input id="searchTxt" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -39,12 +40,19 @@
         <h1>Welcome To Magic Notes</h1>
         <div class="card">
             <div class="card-body">
+                <div class="mb-3">
+                    <h5 class="card-title">Add Title</h5>
+
+                    <input type="text" class="form-control" id="addTitle" aria-describedby="title"
+                        placeholder="Enter your title ">
+
+                </div>
                 <h5 class="card-title">Add a note</h5>
                 <div class="mb-3">
 
                     <textarea class="form-control" id="addTxt" rows="3"></textarea>
                 </div>
-                <button id="addBtn"  class="btn btn-primary">Add Note</button>
+                <button id="addBtn" class="btn btn-primary">Add Note</button>
             </div>
         </div>
         <hr>
